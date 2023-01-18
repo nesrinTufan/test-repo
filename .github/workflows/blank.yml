@@ -1,0 +1,23 @@
+
+
+name: CI
+
+
+on:
+  workflow_call:
+    inputs:
+      working-directory:
+        description: "Working-directory what dir to scan"
+        required: false
+        default: .
+        type: string
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
