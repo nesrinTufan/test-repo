@@ -11,9 +11,9 @@ on:
         required: false
         default: .
         type: string
-    #secrets:
-      #EE_CHECKOUT_TOKEN:
-        #required: true
+    secrets:
+      git-token:
+        required: true
   push:
     branches: [ "main" ]
   workflow_dispatch:
@@ -23,8 +23,8 @@ jobs:
   build:
   
     runs-on: ubuntu-latest
-    #env:
-      #EE_CHECKOUT_TOKEN: ${{ secrets.EE_CHECKOUT_TOKEN }}
+    env:
+      GITHUB_TOKEN: ${{ secrets.git-token }}
     steps:
       - name: Run a one-line script
         run: echo Hello, world!
