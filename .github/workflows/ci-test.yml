@@ -36,4 +36,4 @@ jobs:
         shell: bash
         run: |
           env
-          echo "Current branch: $(git branch --show-current)"
+          echo "Testing current branch: $(git branch --show-current)"
