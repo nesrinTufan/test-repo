@@ -27,4 +27,4 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.git-token }}
     steps:
       - name: Run a one-line script
-        run: echo Hello, world! Testing current branch- $(git branch --show-current)
+        run: echo Hello, world! Testing
